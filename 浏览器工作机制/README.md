@@ -25,3 +25,5 @@
 - 数据持久层: 你的应用程序可能需要在本地存储所有数据，譬如 localStorage, indexDB, WebSQL, FileSystem。
 
 # Links
+
+- https://mp.weixin.qq.com/s/CPqNwUMRaKgW-7WFrq9jSg
