@@ -7,12 +7,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/wx-chevalier/Web-Engineering-Series">
+  <a href="https://github.com/wx-chevalier/Web-Engineering-Notes">
     <img src="https://assets.ng-tech.icu/item/header.svg" alt="Logo" style="width: 100vw;height: 400px" />
   </a>
 
   <p align="center">
-    <a href="https://ng-tech.icu/books/Web-Engineering-Series"><strong>在线阅读 >> </strong></a>
+    <a href="https://ng-tech.icu/books/Web-Engineering-Notes"><strong>在线阅读 >> </strong></a>
     <br />
     <br />
     <a href="https://github.com/wx-chevalier">代码实践</a>
@@ -26,7 +26,7 @@
 
 # Introduction | 前言
 
-> 本篇承接自《[Web-Series](https://github.com/wx-chevalier/Web-Series?q=)》，想要了解 Web 开发基础知识请移步。
+> 本篇承接自《[Web-Notes](https://github.com/wx-chevalier/Web-Notes?q=)》，想要了解 Web 开发基础知识请移步。
 
 从桌面浏览器到移动互联网的时代，用户体验毫无疑问都是重中之重，而 Web 页面的性能则是整体体验的基础。所谓高性能的网站，直观来说，即是用户能够快速打开页面展示网页内容，并能流畅的浏览网页，同时尽可能地降低页面资源占用。移动端的硬件条件，网络条件相对于桌面端，会复杂的多，设备类型多样，硬件配置参差不齐，分辨率碎片化，网络状况在移动过程中稳定性，速率都会变化，而对于一个页面到达用户的终端展示，会经过，用户发起请求，服务端接受请求，服务端处理请求，返回响应内容，在用户终端的浏览器展示内容，用户操作页面发起其他页面时间，而这个过程中任何一个环节的延迟都会造成性能瓶颈，降低用户继续访问的可能性，所以我们在服务器端，浏览器端，网络加载，多个方面做了一系列的优化工作。
 
@@ -82,13 +82,13 @@ Contributions are what make the open source community such an amazing place to b
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/Web-Engineering-Series.svg?style=flat-square
-[contributors-url]: https://github.com/wx-chevalier/Web-Engineering-Series/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/Web-Engineering-Series.svg?style=flat-square
-[forks-url]: https://github.com/wx-chevalier/Web-Engineering-Series/network/members
-[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/Web-Engineering-Series.svg?style=flat-square
-[stars-url]: https://github.com/wx-chevalier/Web-Engineering-Series/stargazers
-[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/Web-Engineering-Series.svg?style=flat-square
-[issues-url]: https://github.com/wx-chevalier/Web-Engineering-Series/issues
-[license-shield]: https://img.shields.io/github/license/wx-chevalier/Web-Engineering-Series.svg?style=flat-square
-[license-url]: https://github.com/wx-chevalier/Web-Engineering-Series/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/Web-Engineering-Notes.svg?style=flat-square
+[contributors-url]: https://github.com/wx-chevalier/Web-Engineering-Notes/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/Web-Engineering-Notes.svg?style=flat-square
+[forks-url]: https://github.com/wx-chevalier/Web-Engineering-Notes/network/members
+[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/Web-Engineering-Notes.svg?style=flat-square
+[stars-url]: https://github.com/wx-chevalier/Web-Engineering-Notes/stargazers
+[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/Web-Engineering-Notes.svg?style=flat-square
+[issues-url]: https://github.com/wx-chevalier/Web-Engineering-Notes/issues
+[license-shield]: https://img.shields.io/github/license/wx-chevalier/Web-Engineering-Notes.svg?style=flat-square
+[license-url]: https://github.com/wx-chevalier/Web-Engineering-Notes/blob/master/LICENSE.txt
