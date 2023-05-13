@@ -4,6 +4,8 @@
 
 ![事件处理示意](https://s1.ax1x.com/2020/11/06/BfVlGQ.md.png)
 
+![Life of a Frame](https://assets.ng-tech.icu/item/20230513204748.png)
+
 # 渲染进程中合成器线程接收事件
 
 前面我们说到，合成器线程可以独立于主线程之外通过已光栅化的层创建组合帧，例如页面滚动，如果没有对页面滚动绑定相关的事件，组合器线程可以独立于主线程创建组合帧，如果页面绑定了页面滚动事件，合成器线程会等待主线程进行事件处理后才会创建组合帧。那么，合成器线程是如何判断出这个事件是否需要路由给主线程处理的呢？
@@ -45,34 +47,3 @@ document.body.addEventListener(
 当合成器线程接收到事件信息，判定到事件发生不在非快速滚动区域后，合成器线程会向主线程发送这个时间信息，主线程获取到事件信息的第一件事就是通过命中测试（hit test）去找到事件的目标对象。具体的命中测试流程是遍历在绘制阶段生成的绘画记录（paint records）来找到包含了事件发生坐标上的元素对象。
 
 ![事件的目标查找](https://s1.ax1x.com/2020/11/07/B4ciM8.md.png)
-
-# 浏览器对事件的优化
-
-## 最小化发送给主线程的事件数
-
-一般我们屏幕的帧率是每秒 60 帧，也就是 60fps，但是某些事件触发的频率超过了这个数值，比如 wheel，mousewheel，mousemove，pointermove，touchmove，这些连续性的事件一般每秒会触发 60~120 次，假如每一次触发事件都将事件发送到主线程处理，由于屏幕的刷新速率相对来说较低，这样使得主线程会触发过量的命中测试以及 JS 代码，使得性能有了没必要是损耗。
-
-![事件分发优化前](https://s1.ax1x.com/2020/11/07/B4cQMT.png)
-
-出于优化的目的，浏览器会合并这些连续的事件，延迟到下一帧渲染是执行，也就是 requestAnimationFrame 之前。
-
-![浏览器事件优化后](https://s1.ax1x.com/2020/11/07/B4cwQK.png)
-
-而对于非连续性的事件，如 keydown，keyup，mousedown，mouseup，touchstart，touchend 等，会直接派发给主线程去执行。
-
-## 使用 getCoalesecedEvents 来获取帧内（intra-frame）事件
-
-对于大多数 web 应用来说，合并事件应该已经足够用来提供很好的用户体验了，然而，如果你正在构建的是一个根据用户的 touchmove 坐标来进行绘图的应用的话，合并事件可能会使页面画的线不够顺畅和连续。在这种情况下，你可以使用鼠标事件的 getCoalescedEvents 来获取被合成的事件的详细信息。
-
-![左边是顺畅的触摸手势，右边是事件合成后不那么连续的手势](https://s1.ax1x.com/2020/11/07/B44WND.md.png)
-
-```js
-window.addEventListener("pointermove", (event) => {
-  const events = event.getCoalescedEvents();
-  for (let event of events) {
-    const x = event.pageX;
-    const y = event.pageY;
-    // draw a line using x and y coordinates.
-  }
-});
-```
