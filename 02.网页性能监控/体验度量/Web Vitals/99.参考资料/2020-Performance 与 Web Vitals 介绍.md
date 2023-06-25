@@ -16,7 +16,7 @@
 
 - PerformanceNavigationTiming https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming
 
-`Performanceresourcetiming` 接口扩展了 `Performance Timeline` 中的 `PerformanceEntry` 接口，提供了用于存储和检索有关浏览器文档事件的指标的方法和属性。 例如，此接口可用于确定加载或卸载文档需要多少时间。
+`Performanceresourcetiming` 接口扩展了 `Performance Timeline` 中的 `PerformanceEntry` 接口，提供了用于存储和检索有关浏览器文档事件的指标的方法和属性。例如，此接口可用于确定加载或卸载文档需要多少时间。
 
 通过 `performance.getEntries()` 可以访问页面上每个资源的一组关键网络计时属性，之后便可以用 `responseEnd` 和 `startTime` 之间的差值来计算所用的时间。
 
@@ -181,31 +181,31 @@ Google 用 75 分位来代表网站某一指标的整体结果 [6]。例如，�
 
 **附 1 PerformanceResourceTiming 属性表**
 
-| 属性                  | 描述                                                                                                                                                                                                                       |
-| :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| entryType             | EntryType 的类型 resource                                                                                                                                                                                                  |
-| name                  | resources URL                                                                                                                                                                                                              |
-| startTime             | 在资源提取开始的时间                                                                                                                                                                                                       |
-| duration              | 整个流程消耗的时间=responseEnd-startTime                                                                                                                                                                                   |
-| initiatorType         | 发起资源请求的类型                                                                                                                                                                                                         |
-| nextHopProtocol       | 获取资源的网络协议的字符串                                                                                                                                                                                                 |
-| workerStart           | 如果 Service Worker 线程已在运行,则在调用 FetchEvent 之前立即返回 DOMHighResTimeStamp，如果尚未运行，则在启动 Service Worker 线程之前立即返回 DOMHighResTimeStamp。 如果资源未被 Service Worker 拦截，则该属性将始终返回 0 |
-| redirectStart         | 初始重定向的开始获取时间                                                                                                                                                                                                   |
-| redirectEnd           | 紧接在收到最后一次重定向响应的最后一个字节后                                                                                                                                                                               |
-| fetchStart            | 拉取资源开始时间，紧接在浏览器开始获取资源之前                                                                                                                                                                             |
-| domainLookupStart     | 紧接在浏览器启动资源的域名查找之前                                                                                                                                                                                         |
-| domainLookupEnd       | 表示浏览器完成资源的域名查找后的时间                                                                                                                                                                                       |
-| connectStart          | 开始 TCP 连接：紧接在浏览器检索资源，开始建立与服务器的连接之前                                                                                                                                                            |
-| connectEnd            | 结束 TCP 连接：紧接在浏览器完成与服务器的连接以检索资源之后                                                                                                                                                                |
-| secureConnectStart    | 开始 SSL 连接：紧接在浏览器启动握手过程之前，以保护当前连接                                                                                                                                                                |
-| requestStart          | 紧接在浏览器开始从服务器请求资源之前                                                                                                                                                                                       |
-| responseStart         | 紧接在浏览器收到服务器响应的第一个字节后                                                                                                                                                                                   |
-| responseEnd           | 紧接在浏览器收到资源的最后一个字节之后或紧接在传输连接关闭之前，以先到者为准                                                                                                                                               |
-| secureConnectionStart | SSL / 初始连接时间                                                                                                                                                                                                         |
-| transferSize          | 表示获取资源的大小（以八位字节为单位）的数字。 包括响应头字段和响应 payload body 的大小。                                                                                                                                  |
-| encodedBodySize       | 在删除任何应用的内容编码之前，从 payload body 的提取（HTTP 或高速缓存）接收的大小（以八位字节为单位）的 number                                                                                                             |
-| decodedBodySize       | 在删除任何应用的内容编码之后，从消息正文( message body )的提取（HTTP 或缓存）接收的大小（以八位字节为单位）的 number                                                                                                       |
-| serverTiming          | 包含服务器时序度量( timing metrics )的 PerformanceServerTiming 条目数组，可用于服务器传数据到前端                                                                                                                          |
+| 属性                  | 描述                                                                                                                                                                                                                      |
+| :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| entryType             | EntryType 的类型 resource                                                                                                                                                                                                 |
+| name                  | resources URL                                                                                                                                                                                                             |
+| startTime             | 在资源提取开始的时间                                                                                                                                                                                                      |
+| duration              | 整个流程消耗的时间=responseEnd-startTime                                                                                                                                                                                  |
+| initiatorType         | 发起资源请求的类型                                                                                                                                                                                                        |
+| nextHopProtocol       | 获取资源的网络协议的字符串                                                                                                                                                                                                |
+| workerStart           | 如果 Service Worker 线程已在运行,则在调用 FetchEvent 之前立即返回 DOMHighResTimeStamp，如果尚未运行，则在启动 Service Worker 线程之前立即返回 DOMHighResTimeStamp。如果资源未被 Service Worker 拦截，则该属性将始终返回 0 |
+| redirectStart         | 初始重定向的开始获取时间                                                                                                                                                                                                  |
+| redirectEnd           | 紧接在收到最后一次重定向响应的最后一个字节后                                                                                                                                                                              |
+| fetchStart            | 拉取资源开始时间，紧接在浏览器开始获取资源之前                                                                                                                                                                            |
+| domainLookupStart     | 紧接在浏览器启动资源的域名查找之前                                                                                                                                                                                        |
+| domainLookupEnd       | 表示浏览器完成资源的域名查找后的时间                                                                                                                                                                                      |
+| connectStart          | 开始 TCP 连接：紧接在浏览器检索资源，开始建立与服务器的连接之前                                                                                                                                                           |
+| connectEnd            | 结束 TCP 连接：紧接在浏览器完成与服务器的连接以检索资源之后                                                                                                                                                               |
+| secureConnectStart    | 开始 SSL 连接：紧接在浏览器启动握手过程之前，以保护当前连接                                                                                                                                                               |
+| requestStart          | 紧接在浏览器开始从服务器请求资源之前                                                                                                                                                                                      |
+| responseStart         | 紧接在浏览器收到服务器响应的第一个字节后                                                                                                                                                                                  |
+| responseEnd           | 紧接在浏览器收到资源的最后一个字节之后或紧接在传输连接关闭之前，以先到者为准                                                                                                                                              |
+| secureConnectionStart | SSL / 初始连接时间                                                                                                                                                                                                        |
+| transferSize          | 表示获取资源的大小（以八位字节为单位）的数字。包括响应头字段和响应 payload body 的大小。                                                                                                                                  |
+| encodedBodySize       | 在删除任何应用的内容编码之前，从 payload body 的提取（HTTP 或高速缓存）接收的大小（以八位字节为单位）的 number                                                                                                            |
+| decodedBodySize       | 在删除任何应用的内容编码之后，从消息正文( message body )的提取（HTTP 或缓存）接收的大小（以八位字节为单位）的 number                                                                                                      |
+| serverTiming          | 包含服务器时序度量( timing metrics )的 PerformanceServerTiming 条目数组，可用于服务器传数据到前端                                                                                                                         |
 
 **附 2 部分性能基础指标计算方式**
 
