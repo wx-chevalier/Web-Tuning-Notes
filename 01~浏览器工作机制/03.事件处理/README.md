@@ -4,7 +4,7 @@
 
 ![事件处理示意](https://s1.ax1x.com/2020/11/06/BfVlGQ.md.png)
 
-![Life of a Frame](https://assets.ng-tech.icu/item/20230513204748.png)
+![Life of a Frame](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20230513204748.png)
 
 # 渲染进程中合成器线程接收事件
 

@@ -2,11 +2,11 @@
 
 前端质量监控包括：PC Web 监控、H5 监控、RN/Weex 监控、小程序监控等。本章主要围绕 Web 技术简介常用的客户端监控系统的设计与实现。
 
-![](https://assets.ng-tech.icu/item/20230512193921.png)
+![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20230512193921.png)
 
 前端监控往往是承接自端到端测试，譬如合成测试监控（Synthetic Tests），所谓合成测试监控（SYN）就是在一个模拟场景里提交一个需要做质量审计的页面，通过一系列的工具、规则去运行你的页面，提取一些质量指标，并最终得出一份审计报告。最典型的合成测试监控工具就是大名鼎鼎的 Google Lighthouse。
 
-![](https://assets.ng-tech.icu/item/20230512204244.png)
+![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20230512204244.png)
 
 合成测试监控可以帮助我们发现一些明显的前端质量问题（如图片未压缩、没有设置合理的静态资源缓存策略、页面是否可访问等），在分布式部署的前提下还可以将上述能力扩展到全球多个节点同时监控。由于是模拟运行环境，并不能反映用户真实的数据，因此在做前端监控时，一般还会搭配真实用户监控能力一起实现。
 
